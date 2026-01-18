@@ -1,0 +1,37 @@
+2024-06-03 17:08:15.629 | INFO     | __main__:<module>:43 - device: cuda
+2024-06-03 17:08:15.648 | INFO     | __main__:<module>:52 - {
+  "train_file": "data/VTE/train_data.json",
+  "dev_file": "data/VTE/dev_data.json",
+  "validation_rate": 0.15,
+  "test_file": "data/VTE/test_data.json",
+  "model_type": "gp",
+  "checkpoints_dir": "checkpoints/VTE",
+  "model_name": "best_model.pkl",
+  "classes": [
+    "ope",
+    "dis",
+    "sym",
+    "bod",
+    "dru"
+  ],
+  "decision_threshold": 0.5,
+  "use_multilabel_categorical_cross_entropy": true,
+  "use_gan": false,
+  "gan_method": "pgd",
+  "attack_round": 3,
+  "warmup": false,
+  "scheduler_type": "linear",
+  "num_warmup_steps": -1,
+  "max_sequence_length": 200,
+  "epoch": 50,
+  "batch_size": 16,
+  "dropout_rate": 0.5,
+  "print_per_batch": 100,
+  "learning_rate": 5e-05,
+  "optimizer": "AdamW",
+  "is_early_stop": true,
+  "patient": 5
+}
+2024-06-03 17:08:15.648 | INFO     | __main__:<module>:53 - mode: predict_one
+2024-06-03 17:08:16.820 | INFO     | engines.predict:predict_one:44 - predict time consumption: 204.321(ms)
+2024-06-03 17:08:16.820 | INFO     | __main__:<module>:58 - please input a sentence (enter [exit] to exit.)

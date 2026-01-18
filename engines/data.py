@@ -14,7 +14,7 @@ class DataManager:
         self.configs = configs
         self.batch_size = configs['batch_size']
         self.max_sequence_length = configs['max_sequence_length']
-        self.tokenizer = BertTokenizerFast.from_pretrained('bert-base-chinese')
+        self.tokenizer = BertTokenizerFast.from_pretrained('models/bert_base_chinese')
 
         self.classes = configs['classes']
         self.num_labels = len(self.classes)

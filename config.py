@@ -10,7 +10,7 @@
 # test:                跑测试集
 # convert2tf:          将torch模型保存为onnx文件
 # show_model_info:     打印模型参数
-mode = 'interactive_predict'
+mode = 'train'
 
 # 使用GPU设备
 use_cuda = True
@@ -18,29 +18,30 @@ cuda_device = -1
 
 configure = {
     # 训练数据集
-    'train_file': 'data/example_datasets2/train_data.json',
+    'train_file': 'data/VTE/train_data.json',
     # 验证数据集
-    'dev_file': 'data/example_datasets2/dev_data.json',
+    'dev_file': 'data/VTE/dev_data.json',
     # 没有验证集时，从训练集抽取验证集比例
     'validation_rate': 0.15,
     # 测试数据集
-    'test_file': '',
+    'test_file': 'data/VTE/test_data.json',
     # 使用的模型
     # bp: binary pointer
     # gp: global pointer
     'model_type': 'gp',
     # 模型保存的文件夹
-    'checkpoints_dir': 'checkpoints/example_datasets2',
+    'checkpoints_dir': 'checkpoints/gan-gp/bert_base_chinese',
     # 模型名字
     'model_name': 'best_model.pkl',
     # 类别列表
-    'classes': ['person', 'location', 'organization'],
+    #'classes': ['person', 'location', 'organization'],
+    'classes': ['ope', 'dis', 'sym', 'bod', 'dru'],
     # decision_threshold
     'decision_threshold': 0.5,
     # 是否使用苏神的多标签分类的损失函数，默认使用BCELoss
     'use_multilabel_categorical_cross_entropy': True,
     # 使用对抗学习
-    'use_gan': False,
+    'use_gan':True,
     # 目前支持FGM和PGD两种方法
     # fgm:Fast Gradient Method
     # pgd:Projected Gradient Descent
@@ -56,7 +57,7 @@ configure = {
     # 句子最大长度
     'max_sequence_length': 200,
     # epoch
-    'epoch': 50,
+    'epoch': 3,
     # batch_size
     'batch_size': 16,
     # dropout rate

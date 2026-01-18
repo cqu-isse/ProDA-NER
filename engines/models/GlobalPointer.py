@@ -9,7 +9,8 @@ from config import mode
 class EffiGlobalPointer(nn.Module):
     def __init__(self, num_labels, device, rope=True):
         super(EffiGlobalPointer, self).__init__()
-        self.encoder = BertModel.from_pretrained('bert-base-chinese')
+        #albert-base-chinese-cluecorpussmall,bert_base_chinese,medical_ner,xlm-roberta-base，biobert-base-cased-v1.2,medbert-kd-chinese,biot5
+        self.encoder = BertModel.from_pretrained('models/bert_base_chinese')
         self.device = device
         self.inner_dim = 64
         self.hidden_size = self.encoder.config.hidden_size

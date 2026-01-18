@@ -9,10 +9,13 @@ import json
 import torch
 import time
 import os
+import matplotlib.pyplot as plt  # 导入 matplotlib
 
 
 class Train:
     def __init__(self, configs, data_manager, device, logger):
+        self.losses = []  # 新增这一行，用于保存每轮的平均损失
+
         self.configs = configs
         self.device = device
         self.logger = logger
@@ -175,6 +178,7 @@ class Train:
                 logits, _ = model(token_ids, attention_mask, token_type_ids)
                 loss = self.calculate_loss(logits, label_vectors, attention_mask)
                 loss.backward()
+                self.losses.append(loss.item())
                 loss_sum += loss.item()
                 if self.configs['use_gan']:
                     k = self.configs['attack_round']
@@ -230,12 +234,15 @@ class Train:
                         self.configs['patient']))
                     self.logger.info('overall best f1 is {} at {} epoch'.format(best_f1, best_epoch))
                     self.logger.info('total training time consumption: %.3f(min)' % ((time.time() - very_start_time) / 60))
+                    self.plot_losses()
                     return
         self.logger.info('overall best f1 is {} at {} epoch'.format(best_f1, best_epoch))
         self.logger.info('total training time consumption: %.3f(min)' % ((time.time() - very_start_time) / 60))
+        self.plot_losses()
 
     def validate(self, model, dev_loader):
         counts = {}
+        counts_all = {'A': 0.0, 'B': 1e-10, 'C': 1e-10}
         results_of_each_entity = {}
         for class_name, class_id in self.data_manager.categories.items():
             counts[class_id] = {'A': 0.0, 'B': 1e-10, 'C': 1e-10}
@@ -261,10 +268,13 @@ class Train:
                             p_entity_set = set()
                         # 预测出来并且正确个数
                         counts[class_id]['A'] += len(p_entity_set & entity_set)
+                        counts_all['A'] += counts[class_id]['A']
                         # 预测出来的结果个数
                         counts[class_id]['B'] += len(p_entity_set)
+                        counts_all['B'] += counts[class_id]['B']
                         # 真实的结果个数
                         counts[class_id]['C'] += len(entity_set)
+                        counts_all['C'] += counts[class_id]['C']
         for class_id, count in counts.items():
             f1, precision, recall = 2 * count['A'] / (
                 count['B'] + count['C']), count['A'] / count['B'], count['A'] / count['C']
@@ -272,6 +282,11 @@ class Train:
             results_of_each_entity[class_name]['f1'] = f1
             results_of_each_entity[class_name]['precision'] = precision
             results_of_each_entity[class_name]['recall'] = recall
+        f1_total = 2 * counts_all['A'] / (counts_all['B'] +counts_all['C'])
+        precision_total = counts_all['A'] / counts_all['B']
+        recall_total = counts_all['A'] / counts_all['C']
+        self.logger.info('Total precision: %.4f, Total recall: %.4f, Total f1: %.4f' % (
+            precision_total, recall_total, f1_total))
 
         f1 = 0.0
         for class_id, performance in results_of_each_entity.items():
@@ -282,3 +297,18 @@ class Train:
         # 这里算得是所有类别的平均f1值
         f1 = f1 / len(results_of_each_entity)
         return f1
+
+    def plot_losses(self):
+        """ 绘制损失变化图 """
+        plt.figure(figsize=(10, 5))
+        plt.plot(self.losses, label='Training Loss', alpha=0.5)
+        plt.title("Training Loss Over Time")
+        plt.xlabel("Step/Batch")
+        plt.ylabel("Loss")
+        plt.legend(loc='upper right')
+        plt.grid(True)
+        # 修改为指定的保存路径
+        save_path = '/home/psr/loss_curve.png'
+        plt.savefig(save_path)  # 保存图片
+
+        plt.close()  # 关闭图像以避免内存泄漏
