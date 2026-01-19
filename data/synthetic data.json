@@ -1,0 +1,528 @@
+[
+    {
+        "text": "腹部增强CT示胰腺体尾部占位，考虑胰腺癌伴肝内多发转移。",
+        "entities": [
+            {
+                "start_idx": 7,
+                "type": "sym",
+                "end_idx": 14,
+                "entity": "胰腺体尾部占位"
+            },
+            {
+                "start_idx": 17,
+                "type": "dis",
+                "end_idx": 20,
+                "entity": "胰腺癌"
+            },
+            {
+                "start_idx": 21,
+                "type": "sym",
+                "end_idx": 27,
+                "entity": "肝内多发转移"
+            }
+        ]
+    },
+    {
+        "text": "既往有高血压病史10余年，控制尚可；2型糖尿病病史5年。",
+        "entities": [
+            {
+                "start_idx": 3,
+                "type": "dis",
+                "end_idx": 6,
+                "entity": "高血压"
+            },
+            {
+                "start_idx": 18,
+                "type": "dis",
+                "end_idx": 23,
+                "entity": "2型糖尿病"
+            }
+        ]
+    },
+    {
+        "text": "于2022.03.15行右肺上叶切除术，术后病理提示：浸润性腺癌。",
+        "entities": [
+            {
+                "start_idx": 11,
+                "type": "ope",
+                "end_idx": 18,
+                "entity": "右肺上叶切除术"
+            },
+            {
+                "start_idx": 26,
+                "type": "dis",
+                "end_idx": 31,
+                "entity": "浸润性腺癌"
+            }
+        ]
+    },
+    {
+        "text": "查体：双肺呼吸音粗，未闻及干湿性啰音，右上腹压痛。",
+        "entities": [
+            {
+                "start_idx": 3,
+                "type": "sym",
+                "end_idx": 9,
+                "entity": "双肺呼吸音粗"
+            },
+            {
+                "start_idx": 10,
+                "type": "sym",
+                "end_idx": 18,
+                "entity": "未闻及干湿性啰音"
+            },
+            {
+                "start_idx": 19,
+                "type": "sym",
+                "end_idx": 24,
+                "entity": "右上腹压痛"
+            }
+        ]
+    },
+    {
+        "text": "送检（乙状结肠）管状腺瘤，局灶癌变（高分化腺癌）。",
+        "entities": [
+            {
+                "start_idx": 3,
+                "type": "bod",
+                "end_idx": 7,
+                "entity": "乙状结肠"
+            },
+            {
+                "start_idx": 8,
+                "type": "dis",
+                "end_idx": 12,
+                "entity": "管状腺瘤"
+            },
+            {
+                "start_idx": 18,
+                "type": "dis",
+                "end_idx": 23,
+                "entity": "高分化腺癌"
+            }
+        ]
+    },
+    {
+        "text": "主诉：反复上腹部胀痛3月余，加重伴呕吐1周。",
+        "entities": [
+            {
+                "start_idx": 3,
+                "type": "sym",
+                "end_idx": 9,
+                "entity": "上腹部胀痛"
+            },
+            {
+                "start_idx": 15,
+                "type": "sym",
+                "end_idx": 17,
+                "entity": "呕吐"
+            }
+        ]
+    },
+    {
+        "text": "MRI提示：前列腺外周带异常信号，考虑前列腺癌可能，累及精囊腺。",
+        "entities": [
+            {
+                "start_idx": 6,
+                "type": "sym",
+                "end_idx": 14,
+                "entity": "前列腺外周带异常"
+            },
+            {
+                "start_idx": 19,
+                "type": "dis",
+                "end_idx": 23,
+                "entity": "前列腺癌"
+            },
+            {
+                "start_idx": 27,
+                "type": "sym",
+                "end_idx": 31,
+                "entity": "累及精囊腺"
+            }
+        ]
+    },
+    {
+        "text": "患者无明显发热、寒战，无胸闷、气促等不适。",
+        "entities": [
+            {
+                "start_idx": 5,
+                "type": "sym",
+                "end_idx": 7,
+                "entity": "发热"
+            },
+            {
+                "start_idx": 8,
+                "type": "sym",
+                "end_idx": 10,
+                "entity": "寒战"
+            },
+            {
+                "start_idx": 12,
+                "type": "sym",
+                "end_idx": 14,
+                "entity": "胸闷"
+            },
+            {
+                "start_idx": 15,
+                "type": "sym",
+                "end_idx": 17,
+                "entity": "气促"
+            }
+        ]
+    },
+    {
+        "text": "胃镜示：胃窦溃疡型新生物，病理证实为低分化腺癌。",
+        "entities": [
+            {
+                "start_idx": 4,
+                "type": "sym",
+                "end_idx": 11,
+                "entity": "胃窦溃疡型新生物"
+            },
+            {
+                "start_idx": 17,
+                "type": "dis",
+                "end_idx": 22,
+                "entity": "低分化腺癌"
+            }
+        ]
+    },
+    {
+        "text": "右侧乳腺浸润性导管癌术后化疗后，复查未见复发征象。",
+        "entities": [
+            {
+                "start_idx": 0,
+                "type": "ope",
+                "end_idx": 10,
+                "entity": "右侧乳腺浸润性导管癌"
+            },
+            {
+                "start_idx": 17,
+                "type": "sym",
+                "end_idx": 23,
+                "entity": "未见复发征象"
+            }
+        ]
+    },
+        {
+        "text": "腹部增强CT示肝S6段低密度灶，考虑肝囊肿或血管瘤。",
+        "entities": [
+            {
+                "start_idx": 7,
+                "type": "sym",
+                "end_idx": 14,
+                "entity": "肝S6段低密度灶"
+            },
+            {
+                "start_idx": 18,
+                "type": "dis",
+                "end_idx": 20,
+                "entity": "肝囊肿"
+            },
+            {
+                "start_idx": 22,
+                "type": "dis",
+                "end_idx": 24,
+                "entity": "血管瘤"
+            }
+        ]
+    },
+    {
+        "text": "既往冠心病史5年，长期口服阿司匹林肠溶片治疗。",
+        "entities": [
+            {
+                "start_idx": 2,
+                "type": "dis",
+                "end_idx": 4,
+                "entity": "冠心病"
+            },
+            {
+                "start_idx": 11,
+                "type": "dru",
+                "end_idx": 17,
+                "entity": "阿司匹林肠溶片"
+            }
+        ]
+    },
+    {
+        "text": "查体：左锁骨上窝可触及一质硬淋巴结，活动度差，无触痛。",
+        "entities": [
+            {
+                "start_idx": 3,
+                "type": "bod",
+                "end_idx": 7,
+                "entity": "左锁骨上窝"
+            },
+            {
+                "start_idx": 11,
+                "type": "sym",
+                "end_idx": 15,
+                "entity": "质硬淋巴结"
+            },
+            {
+                "start_idx": 17,
+                "type": "sym",
+                "end_idx": 20,
+                "entity": "活动度差"
+            },
+            {
+                "start_idx": 22,
+                "type": "sym",
+                "end_idx": 24,
+                "entity": "无触痛"
+            }
+        ]
+    },
+    {
+        "text": "于2021年行甲状腺全切术，术后病理：（右叶）乳头状癌。",
+        "entities": [
+            {
+                "start_idx": 7,
+                "type": "ope",
+                "end_idx": 11,
+                "entity": "甲状腺全切术"
+            },
+            {
+                "start_idx": 18,
+                "type": "bod",
+                "end_idx": 19,
+                "entity": "右叶"
+            },
+            {
+                "start_idx": 21,
+                "type": "dis",
+                "end_idx": 24,
+                "entity": "乳头状癌"
+            }
+        ]
+    },
+    {
+        "text": "胃镜示：胃角巨大溃疡，周边粘膜隆起，质脆易出血。",
+        "entities": [
+            {
+                "start_idx": 4,
+                "type": "bod",
+                "end_idx": 5,
+                "entity": "胃角"
+            },
+            {
+                "start_idx": 6,
+                "type": "sym",
+                "end_idx": 9,
+                "entity": "巨大溃疡"
+            },
+            {
+                "start_idx": 11,
+                "type": "sym",
+                "end_idx": 16,
+                "entity": "周边粘膜隆起"
+            },
+            {
+                "start_idx": 18,
+                "type": "sym",
+                "end_idx": 22,
+                "entity": "质脆易出血"
+            }
+        ]
+    },
+    {
+        "text": "诊断为：1.原发性支气管肺癌（左上叶鳞癌 T3N2M0 IIIA期）。",
+        "entities": [
+            {
+                "start_idx": 6,
+                "type": "dis",
+                "end_idx": 13,
+                "entity": "原发性支气管肺癌"
+            },
+            {
+                "start_idx": 15,
+                "type": "bod",
+                "end_idx": 17,
+                "entity": "左上叶"
+            },
+            {
+                "start_idx": 18,
+                "type": "dis",
+                "end_idx": 19,
+                "entity": "鳞癌"
+            }
+        ]
+    },
+    {
+        "text": "因“反复便血伴大便性状改变2月”入院。",
+        "entities": [
+            {
+                "start_idx": 2,
+                "type": "sym",
+                "end_idx": 5,
+                "entity": "反复便血"
+            },
+            {
+                "start_idx": 7,
+                "type": "sym",
+                "end_idx": 12,
+                "entity": "大便性状改变"
+            }
+        ]
+    },
+    {
+        "text": "头部MRI：双侧额叶少许缺血灶，未见明显占位性病变。",
+        "entities": [
+            {
+                "start_idx": 6,
+                "type": "bod",
+                "end_idx": 9,
+                "entity": "双侧额叶"
+            },
+            {
+                "start_idx": 10,
+                "type": "sym",
+                "end_idx": 14,
+                "entity": "少许缺血灶"
+            },
+            {
+                "start_idx": 16,
+                "type": "sym",
+                "end_idx": 24,
+                "entity": "未见明显占位性病变"
+            }
+        ]
+    },
+    {
+        "text": "目前口服吉非替尼靶向治疗中，耐受性尚可。",
+        "entities": [
+            {
+                "start_idx": 4,
+                "type": "dru",
+                "end_idx": 7,
+                "entity": "吉非替尼"
+            }
+        ]
+    },
+    {
+        "text": "病理结果回示：（直肠）管状腺瘤，伴低级别上皮内瘤变。",
+        "entities": [
+            {
+                "start_idx": 8,
+                "type": "bod",
+                "end_idx": 9,
+                "entity": "直肠"
+            },
+            {
+                "start_idx": 11,
+                "type": "dis",
+                "end_idx": 14,
+                "entity": "管状腺瘤"
+            },
+            {
+                "start_idx": 17,
+                "type": "dis",
+                "end_idx": 24,
+                "entity": "低级别上皮内瘤变"
+            }
+        ]
+    },
+    {
+        "text": "查体：腹平软，右下腹麦氏点压痛阳性，无反跳痛。",
+        "entities": [
+            {
+                "start_idx": 3,
+                "type": "sym",
+                "end_idx": 5,
+                "entity": "腹平软"
+            },
+            {
+                "start_idx": 7,
+                "type": "bod",
+                "end_idx": 12,
+                "entity": "右下腹麦氏点"
+            },
+            {
+                "start_idx": 13,
+                "type": "sym",
+                "end_idx": 16,
+                "entity": "压痛阳性"
+            },
+            {
+                "start_idx": 18,
+                "type": "sym",
+                "end_idx": 21,
+                "entity": "无反跳痛"
+            }
+        ]
+    },
+    {
+        "text": "骨扫描示：胸椎、肋骨多处放射性浓聚，考虑骨转移瘤。",
+        "entities": [
+            {
+                "start_idx": 5,
+                "type": "bod",
+                "end_idx": 9,
+                "entity": "胸椎、肋骨"
+            },
+            {
+                "start_idx": 12,
+                "type": "sym",
+                "end_idx": 16,
+                "entity": "放射性浓聚"
+            },
+            {
+                "start_idx": 20,
+                "type": "dis",
+                "end_idx": 23,
+                "entity": "骨转移瘤"
+            }
+        ]
+    },
+    {
+        "text": "既往行胆囊切除术，否认肝炎、结核病史。",
+        "entities": [
+            {
+                "start_idx": 3,
+                "type": "ope",
+                "end_idx": 7,
+                "entity": "胆囊切除术"
+            },
+            {
+                "start_idx": 11,
+                "type": "dis",
+                "end_idx": 12,
+                "entity": "肝炎"
+            },
+            {
+                "start_idx": 14,
+                "type": "dis",
+                "end_idx": 15,
+                "entity": "结核"
+            }
+        ]
+    },
+    {
+        "text": "免疫组化：CK7(+)，TTF-1(+)，Napsin A(+)。",
+        "entities": []
+    },
+    {
+        "text": "左乳肿物穿刺活检示：浸润性导管癌（III级）。",
+        "entities": [
+            {
+                "start_idx": 0,
+                "type": "bod",
+                "end_idx": 1,
+                "entity": "左乳"
+            },
+            {
+                "start_idx": 2,
+                "type": "sym",
+                "end_idx": 3,
+                "entity": "肿物"
+            },
+            {
+                "start_idx": 10,
+                "type": "dis",
+                "end_idx": 15,
+                "entity": "浸润性导管癌"
+            }
+        ]
+    }
+]
